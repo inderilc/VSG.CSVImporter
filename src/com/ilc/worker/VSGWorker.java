@@ -164,9 +164,9 @@ public class VSGWorker {
 
 
                 try {
-                    //Date date = format.parse(order.ShipDate);
-                    Date date = new SimpleDateFormat("mm/dd/yyyy HH:mm").parse(order.ShipDate);
-                    so.FulfillmentDate = (new SimpleDateFormat("MM/dd/yyyy")).format(new Date (date.getTime()));
+
+                    Date date = new SimpleDateFormat("MM/dd/yyyy HH:mm").parse(order.ShipDate);
+                    so.FulfillmentDate = (new SimpleDateFormat("MM/dd/yyyy")).format(new Date(date.getTime()));
                 }
                 catch(Exception ex)
                 {
@@ -277,6 +277,7 @@ public class VSGWorker {
             //soi.KitItem = "false";
             //soi.Note = item.ITEMNUM;
             soi.ProductQuantity = item.QTY;
+            soi.Note=item.NOTES;
             ret.add(soi);
             counter++;
             if(orderLines.size()<=counter)

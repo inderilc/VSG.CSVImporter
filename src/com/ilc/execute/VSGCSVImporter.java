@@ -109,13 +109,13 @@ public class VSGCSVImporter extends FishbowlPlugin {
 
             if (FbiMessage.SUCCESS.getId() != qfRS.getStatusCode())
             {
-                writeTextArea("Error: Quickfilling Order failed.");
-                SOLogger.error("Error: Quickfilling Sales Order. " + rs.getStatusCode() + " " + rs.getStatusMessage(), null);
-                UtilGui.showMessageDialog(rs.getStatusMessage(), "Error Quickfilling Sales Order", 0);
+                writeTextArea("Error: QuickShipping Order failed.");
+                SOLogger.error("Error: QuickShipping Sales Order. " + rs.getStatusCode() + " " + rs.getStatusMessage(), null);
+                UtilGui.showMessageDialog(rs.getStatusMessage(), "Error QuickShipping Sales Order", 0);
             }
             else
             {
-                writeTextArea("Quickfilled SO # "+num+".");
+                writeTextArea("QuickShipped SO # "+num+".");
             }
         }
     }
