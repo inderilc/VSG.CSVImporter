@@ -166,7 +166,7 @@ public class VSGWorker {
                 try {
                     //Date date = format.parse(order.ShipDate);
                     Date date = new SimpleDateFormat("mm/dd/yyyy HH:mm").parse(order.ShipDate);
-                    so.FulfillmentDate = (new SimpleDateFormat("MM/dd/yyyy")).format(date);
+                    so.FulfillmentDate = (new SimpleDateFormat("MM/dd/yyyy")).format(new Date (date.getTime()));
                 }
                 catch(Exception ex)
                 {
