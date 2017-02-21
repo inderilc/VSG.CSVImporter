@@ -23,6 +23,5 @@ public class MutualWorker {
         else
             return "";
     }
-
 }
 

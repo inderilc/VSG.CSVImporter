@@ -38,6 +38,7 @@ new FormModel {
 						name: "btnImport"
 						"text": "Import CSV File"
 						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btnImportMouseClicked", true ) )
 					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 						"gridy": 2
 					} )
