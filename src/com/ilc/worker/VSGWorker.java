@@ -240,11 +240,12 @@ public class VSGWorker {
     private List<SalesOrderItem> MapLineItems (List<ImportOrder> orderLines, int counter) {
         List<SalesOrderItem> ret = new ArrayList<>();
         String nextOrder;
+        String thisOrderNum;
         int len;
         do {
             ImportOrder item = orderLines.get(counter);
             SalesOrderItem soi = new SalesOrderItem();
-
+            thisOrderNum= orderLines.get(counter).ORDERREF;
             String query = "select kitflag from product where product.NUM='"+item.ITEMNUM+"'";
             java.util.List<QueryRow> data = accObj.runQuery(query);
 
@@ -288,7 +289,7 @@ public class VSGWorker {
             tracker=counter;
             nextOrder = orderLines.get(counter).ORDERREF;
             len = nextOrder.length();
-        }while(len==0);
+        }while(thisOrderNum.compareTo(nextOrder) == 0);
         return ret;
     }
 }
