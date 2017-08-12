@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="VSG.CSVImporterPlugin">
+    <output-path>C:/Program Files/Fishbowl14/plugins</output-path>
+    <root id="archive" name="VSG.CSVImporterPlugin.jar">
+      <element id="library" level="project" name="libs" />
+      <element id="module-output" name="VSG.CSVImporter" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/libs/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
